@@ -17,6 +17,8 @@ Lafiya contracts currently declare the following on-chain event schemas:
 - `Paused` (`attester-registry` and `attestation-registry`)
 - `Unpaused` (`attester-registry` and `attestation-registry`)
 - `AttesterRegistryRepointed` (`attestation-registry`)
+- `RateLimitHit` (`attestation-registry`) — published at most once per attester per rate-limit window, on the attestation that fills the window
+- `RateLimitSet` (`attestation-registry`)
 
 `Initialized` is currently a declared schema only: neither registry publishes it
 during initialization. Indexers must not rely on receiving it unless contract

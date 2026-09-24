@@ -29,6 +29,8 @@ This document enumerates the error codes defined in the Lafiya Soroban smart con
 | `5` | `InvalidRegistryWiring` | The configured attester-registry address does not implement the expected interface. Re-run `set_attester_registry` with the correct address, or check your network configuration. |
 | `6` | `AttestationNotFound` | No attestation exists for the given record hash. |
 | `7` | `ContractPaused` | The contract is paused; state-changing calls are rejected until an admin calls `unpause`. |
+| `8` | `RateLimited` | The attester has used up its rate-limit window. Call `get_rate_limit_retry_after` for the first ledger it may attest again. |
+| `9` | `InvalidRateLimit` | `set_attestation_rate_limit` was called with `window_ledgers` of `0` or longer than 30 days of ledgers. |
 
 ## `multisig-account`
 

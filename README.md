@@ -137,6 +137,11 @@ Three Soroban contracts, each in its own crate under `contracts/`.
 | `revoke_attestation(record_hash: BytesN<32>)` | Revokes all attestations for `record_hash`. Requires admin auth. Emits `AttestationRevoked`. |
 | `get_attestation(record_hash: BytesN<32>) -> Option<Attestation>` | Looks up the latest attestation for a record hash. Open to any caller — this is what lets a responder's QR scan verify a card without an external oracle. |
 | `get_attestation_history(record_hash: BytesN<32>) -> Vec<Attestation>` | Returns the full bounded attestation history for a record hash, oldest first. Open to any caller. |
+| `set_attestation_rate_limit(max_per_window: u32, window_ledgers: u32)` | Caps each attester at `max_per_window` attestations per `window_ledgers` ledgers (`0` disables; off by default). Over-limit `attest` calls fail with `Error::RateLimited`. Requires admin auth. Emits `RateLimitSet`. See [`docs/storage-cost.md`](docs/storage-cost.md#attestation-rate-limiting). |
+| `get_attestation_rate_limit() -> Option<RateLimit>` | Returns the global rate limit, if one is configured. |
+| `set_attester_rate_limit(attester: Address, max_per_window: u32)` | Overrides `max_per_window` for one attester (e.g. a high-volume clinical site). Requires admin auth. |
+| `remove_attester_rate_limit(attester: Address)` | Removes an attester's override, reverting it to the global limit. Requires admin auth. |
+| `get_rate_limit_retry_after(attester: Address) -> Option<u32>` | If the attester's window is full, returns the first ledger it may attest again. |
 
 ### Contract upgrades
 
