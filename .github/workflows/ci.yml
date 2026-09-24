@@ -70,6 +70,8 @@ jobs:
         run: cargo build --release --locked --target wasm32v1-none -p multisig-account -p attester-registry -p attestation-registry
       - name: Check README contract tables
         run: python .github/scripts/check_readme_contracts.py
+      - name: Check README versions match Cargo.toml
+        run: python .github/scripts/check_readme_versions.py
 
   fuzz:
     name: Fuzz (proptest, non-blocking)

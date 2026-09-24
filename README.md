@@ -234,7 +234,7 @@ strategy and the follow-up work required before that's live.
 
 ## Tech Stack
 
-- **On-chain:** Soroban smart contracts (Rust), `soroban-sdk` 25.x, on Stellar; USDC on Stellar for CHW payments
+- **On-chain:** Soroban smart contracts (Rust), `soroban-sdk` 27.x, on Stellar; USDC on Stellar for CHW payments
 - **Network:** Stellar testnet first
 - **Standards informing design:** W3C Verifiable Credentials data model (issuer/holder/verifier roles, hash-based attestation)
 
@@ -323,7 +323,7 @@ Covers, per contract (see `contracts/*/src/test.rs` and `tests/integration/run.s
 ## Dependencies
 
 - Rust (stable) + `wasm32v1-none` target — see `rust-toolchain.toml`
-- `soroban-sdk` 25.x
+- `soroban-sdk` 27.x
 - Stellar testnet account and USDC trustline, once deployment scripts land
 
 ## License
