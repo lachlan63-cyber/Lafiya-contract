@@ -335,6 +335,7 @@ Covers, per contract (see `contracts/*/src/test.rs` and `tests/integration/run.s
 Contributions are welcome! As an open-source Digital Public Good, we rely on community contributions to build and maintain Lafiya.
 
 Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for our detailed guidelines, which cover:
+- The [interface stability and deprecation policy](docs/stability-policy.md) for public contract, event, bindings, and CLI surfaces
 - Local development environment setup
 - Branching and commit conventions (Conventional Commits)
 - Cross-repo shared-contract coordination guidelines
