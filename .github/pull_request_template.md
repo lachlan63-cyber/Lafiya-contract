@@ -13,6 +13,7 @@
 - [ ] I have added unit tests covering success, failure, and authorization cases
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have updated the documentation / README if applicable
+- [ ] **Does this change affect the threat model?** If yes, I have updated [docs/security/threat-model.md](../docs/security/threat-model.md)
 
 ## Breaking change?
 <!-- See docs/stability-policy.md for what counts as breaking on each surface. -->

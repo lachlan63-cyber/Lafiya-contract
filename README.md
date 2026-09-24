@@ -403,7 +403,7 @@ Lafiya is an information aid, **not a medical device** and **not a substitute fo
 
 ## Security
 
-Found a vulnerability? Please don't open a public issue — see [SECURITY.md](SECURITY.md) for how to report it privately.
+Found a vulnerability? Please don't open a public issue — see [SECURITY.md](SECURITY.md) for how to report it privately. The contract-layer threat model is in [docs/security/threat-model.md](docs/security/threat-model.md).
 
 ## References
 
